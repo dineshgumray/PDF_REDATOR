@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>PDF REDACTOR</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+
+    <h1>PDF REDACTOR</h1>
+
+    <form id="uploadForm" action="{{ url_for('upload_files') }}" method="post" enctype="multipart/form-data">
+        <button type="button" id="fileLabel">Browse Files</button>
+        <input type="file" name="files[]" multiple id="fileInput" style="display:none;">
+        <div id="fileNames" class="file-box"></div>
+
+        <br><br>
+
+        <label>Enter Redaction Text and Placeholder:</label><br><br>
+        <div id="fieldsContainer">
+            <div class="field-group">
+                <input type="text" name="fields[]" placeholder="Field to redact">
+                <input type="text" name="placeholders[]" placeholder="Placeholder text">
+                <button type="button" class="delete-btn" onclick="deleteField(this)">Delete</button>
+            </div>
+        </div>
+        <button type="button" class="add-btn" onclick="addField()">Add More</button>
+
+        <br><br>
+
+        <label for="page_ranges">Enter Page Ranges (e.g. 1-3,5,7-9):</label><br>
+        <input type="text" name="page_ranges" id="page_ranges" placeholder="e.g. 1-3,5,7-9">
+
+        <br><br>
+
+        <label for="manual_redactions">Manual Redaction Coordinates (x0,y0,x1,y1; multiple separated by ;):</label><br>
+        <input type="text" name="manual_redactions" id="manual_redactions" placeholder="e.g. 100,150,200,180; 300,400,350,450">
+
+        <br><br>
+
+        <label for="object_selection">Object Types to Remove (comma separated, e.g. annot):</label><br>
+        <input type="text" name="object_selection" id="object_selection" placeholder="e.g. annot">
+
+        <br><br>
+
+        <input type="checkbox" name="remove_images" value="yes"> Remove all images (logos/graphics)
+
+        <br><br>
+
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+
+    <br>
+
+    {% if error_message %}
+    <div class="error-message">
+        {{ error_message }}
+    </div>
+    {% endif %}
+
+    {% if preview_files %}
+    <h2>Preview Original and Redacted PDFs:</h2>
+    <table>
+        <tr>
+            <th>Original PDF</th>
+            <th>Redacted PDF</th>
+        </tr>
+        {% for orig, redacted in preview_files %}
+        <tr>
+            <td>
+                <iframe src="{{ url_for('uploaded_file', filename=orig) }}" width="400" height="500"></iframe>
+                <br>{{ orig }}
+            </td>
+            <td>
+                <iframe src="{{ url_for('redacted_file', filename=redacted) }}" width="400" height="500"></iframe>
+                <br>{{ redacted }}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+
+    <!-- Link JS -->
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

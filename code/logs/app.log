@@ -1,0 +1,31 @@
+2025-07-19 19:31:36,643 [ERROR] Error in upload_files route: code=4: only Gray, RGB, and CMYK colorspaces supported
+2025-07-19 19:36:59,009 [WARNING] File not allowed: Photo_with_ID.jpg
+2025-07-19 19:45:01,787 [ERROR] Error clearing folders: [WinError 2] The system cannot find the file specified: 'redacted\\redacted_Intellectual_Property_Rights_Law_Practice.pdf'
+[2025-07-19 20:15:02,110] INFO in app: Files processed successfully.
+[2025-07-19 20:16:05,569] INFO in app: Files processed successfully.
+[2025-07-19 20:16:37,416] INFO in app: Cleaning up folders on program exit.
+[2025-07-19 20:16:37,507] INFO in app: Cleaning up folders on program exit.
+[2025-07-31 15:07:59,428] INFO in app: Files processed successfully.
+[2025-07-31 15:16:39,979] INFO in app: Cleaning up folders on program exit.
+[2025-07-31 15:16:40,091] INFO in app: Cleaning up folders on program exit.
+[2025-07-31 15:17:59,029] INFO in app: Files processed successfully.
+[2025-07-31 15:18:13,637] INFO in app: Files processed successfully.
+[2025-07-31 15:19:18,485] INFO in app: Files processed successfully.
+[2025-07-31 15:19:52,806] INFO in app: Cleaning up folders on program exit.
+[2025-07-31 15:19:52,928] INFO in app: Cleaning up folders on program exit.
+[2025-07-31 15:22:00,959] INFO in app: Cleaning up folders on program exit.
+[2025-07-31 15:22:01,043] INFO in app: Cleaning up folders on program exit.
+[2025-07-31 15:27:06,270] INFO in app: Files processed successfully.
+[2025-07-31 15:30:31,470] INFO in app: Files processed successfully.
+[2025-07-31 15:31:57,258] INFO in app: Files processed successfully.
+[2025-07-31 15:32:18,517] INFO in app: Cleaning up folders on program exit.
+[2025-07-31 15:32:18,606] INFO in app: Cleaning up folders on program exit.
+[2025-07-31 15:35:10,121] INFO in app: Files processed successfully.
+[2025-07-31 15:38:52,965] INFO in app: Files processed successfully.
+[2025-07-31 15:39:22,347] INFO in app: Files processed successfully.
+[2025-07-31 15:41:58,882] INFO in app: Cleaning up folders on program exit.
+[2025-07-31 15:41:58,976] INFO in app: Cleaning up folders on program exit.
+[2025-07-31 15:49:45,301] INFO in app: Files processed successfully.
+[2025-07-31 15:51:46,626] INFO in app: Files processed successfully.
+[2025-07-31 15:52:30,236] INFO in app: Cleaning up folders on program exit.
+[2025-07-31 15:52:30,328] INFO in app: Cleaning up folders on program exit.
